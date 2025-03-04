@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Sky Production</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* เปลี่ยนพื้นหลังเป็นสีขาว */
+            color: #000000; /* เปลี่ยนสีตัวอักษรเป็นดำ */
+            overflow-x: hidden;
+            text-align: center;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(90deg, #000000, #000000); /* เปลี่ยนพื้นหลังเป็นโทนสีเทาอ่อน */
+            color: #ffffff; /* เปลี่ยนสีตัวอักษรเป็นดำ */
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* เงาเบาลง */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            color: #ffffff; /* เปลี่ยนสีตัวอักษรเป็นดำ */
+        }
+
+        /* Navigation Styles */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #ffffff; /* เปลี่ยนสีตัวอักษรเป็นดำ */
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #4caf50; /* เปลี่ยนสีเมื่อโฮเวอร์เป็นสีเขียว */
+        }
+
+        /* Logo Styles */
+        .logo {
+            height: 60px;
+            margin-right: 15px;
+            border-radius: 50%;
+            border: 3px solid #000000; /* เปลี่ยนสีขอบเป็นดำ */
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 80px 20px;
+            background-color: #f9f9f9; /* เปลี่ยนพื้นหลังเป็นสีขาวเทา */
+            text-align: center;
+        }
+
+        .section h2 {
+            color: #4caf50; /* เปลี่ยนสีหัวข้อเป็นสีเขียว */
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .section p {
+            max-width: 800px;
+            margin: 0 auto 20px;
+            font-size: 20px;
+            line-height: 1.8;
+            color: #333333; /* เปลี่ยนสีตัวอักษรเป็นเทาเข้ม */
+        }
+
+        .section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เงาเบาลง */
+            margin-bottom: 30px;
+        }
+
+        .section ul {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+
+        .section ul li {
+            margin-bottom: 15px;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333333; /* เปลี่ยนสีตัวอักษรเป็นเทาเข้ม */
+        }
+
+        .section ul li strong {
+            color: #4caf50; /* เปลี่ยนสีตัวอักษรเป็นสีเขียว */
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #4caf50; /* เปลี่ยนสีปุ่มเป็นสีเขียว */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.3s ease;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #45a049; /* เปลี่ยนสีเมื่อโฮเวอร์เป็นสีเขียวเข้ม */
+            transform: translateY(-3px);
+        }
+
+        /* Back Button Styles */
+        .back-button {
+            display: inline-block;
+            margin: 40px auto;
+            padding: 15px 30px;
+            background-color: #4caf50; /* เปลี่ยนสีปุ่มเป็นสีเขียว */
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #45a049; /* เปลี่ยนสีเมื่อโฮเวอร์เป็นสีเขียวเข้ม */
+            transform: translateY(-3px);
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #f1f1f1; /* เปลี่ยนพื้นหลังเป็นสีเทาอ่อน */
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #333333; /* เปลี่ยนสีตัวอักษรเป็นเทาเข้ม */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .logo {
+                margin-bottom: 15px;
+            }
+
+            .section h2 {
+                font-size: 28px;
+            }
+
+            .section p {
+                font-size: 18px;
+            }
+
+            .section ul li {
+                font-size: 16px;
+            }
+
+            .btn {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+
+            .back-button {
+                font-size: 16px;
+                padding: 12px 24px;
+            }
+
+            .footer p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container" style="display: flex; align-items: center;">
+            <img src="image/1.webp" alt="Green Sky Production Logo" class="logo">
+            <h1 style="margin-left: 15px;">Green Sky Production</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="main.html">HOME</a></li>
+                <li><a href="About us.html">ABOUT US</a></li>
+                <li><a href="Services Page.html">SERVICES</a></li>
+                <li><a href="Packages.html">PACKAGES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Production Section -->
+    <section class="section" id="Production">
+        <h2>Production</h2>
+        <img src="image/133.jpg" alt="Production Design Visualization">
+        <p>
+            บริษัทฯ เป็นโปรดักชั่นเฮ้าส์ที่ให้บริการครบวงจร ตั้งแต่การให้คำปรึกษาสร้างแบรนด์ การวางกลยุทธ์ จนถึงการผลิตภาพยนตร์โฆษณาในรูปแบบฟิล์มโปรดักชั่น (Film Production) และวีดีโอโปรดักชั่น (Video Production) เรามุ่งมั่นสร้างสรรค์งานคุณภาพด้วยกระบวนการผลิตที่ได้มาตรฐาน จากทีมงานมืออาชีพที่มีประสบการณ์ยาวนานในวงการโฆษณา
+        </p>
+        <h3>บริการของเรา</h3>
+        <ul>
+            <li><strong>โฆษณาบนทีวี:</strong> สร้างสรรค์โฆษณาที่โดดเด่นและน่าจดจำ</li>
+            <li><strong>ไวรัลคลิป:</strong> ออกแบบคลิปที่สร้างการรับรู้และแพร่กระจายอย่างรวดเร็ว</li>
+            <li><strong>วีดีโอแนะนำบริษัท:</strong> นำเสนอภาพลักษณ์องค์กรอย่างมืออาชีพ</li>
+            <li><strong>วีดีโอคอร์ปอเรท:</strong> สื่อสารข้อมูลองค์กรอย่างมีประสิทธิภาพ</li>
+            <li><strong>วีดีโอพรีเซ็นเทชั่น:</strong> ออกแบบวีดีโอสำหรับนำเสนอผลิตภัณฑ์หรือบริการ</li>
+            <li><strong>วีดีโอคอนเทนต์โฆษณาบนเฟสบุ๊คและยูทูป:</strong> สร้างคอนเทนต์ที่ดึงดูดและเข้าถึงกลุ่มเป้าหมาย</li>
+            <li><strong>วีดีโออบรมพนักงาน:</strong> ออกแบบสื่อการอบรมที่เข้าใจง่ายและน่าสนใจ</li>
+            <li><strong>งานกราฟิกโฆษณา CGI 2D/3D:</strong> สร้างสรรค์กราฟิกที่ทันสมัยและสวยงาม</li>
+            <li><strong>บริการทำสีหนัง (Color Grading):</strong> เพิ่มความสมจริงและสวยงามให้กับภาพ</li>
+            <li><strong>เช่าไฟกองถ่ายทำ (Lighting & Grip):</strong> อุปกรณ์ครบครันสำหรับการถ่ายทำ</li>
+            <li><strong>แต่งเพลงโฆษณาและเพลงประจำองค์กร:</strong> สร้างสรรค์เสียงเพลงที่โดดเด่นและเหมาะสม</li>
+        </ul>
+        <h3>จุดเด่นของเรา</h3>
+        <p>
+            เราทำงานแบบครบวงจร ตั้งแต่กระบวนการคิด (Creative) เทคนิคการถ่ายทำ (Production) และกระบวนการทางภาพ (Post-Production) พร้อมคุมงบประมาณให้คุณได้งานคุณภาพในราคาที่เหมาะสม
+        </p>
+    </section>
+
+    <!-- Back Button -->
+    <a href="Services Page.html" class="back-button">Back to Services</a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2023 Green Sky Production. All rights reserved.</p>
+    </footer>
+</body>
+</html>

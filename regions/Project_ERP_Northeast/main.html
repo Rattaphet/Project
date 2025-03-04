@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E3 Production House</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .header {
+            background: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .promotion-btn {
+            background-color: #ff6600; /* สีพื้นหลัง */
+            color: white; /* สีข้อความ */
+            padding: 10px 20px; /* ขนาดปุ่ม */
+            text-decoration: none; /* ลบขีดเส้นใต้ */
+            font-size: 18px; /* ขนาดตัวอักษร */
+            border-radius: 5px; /* มุมมน */
+            transition: background-color 0.3s; /* เพิ่มการเปลี่ยนสี */
+        }
+
+        .header .promotion-btn:hover {
+            background-color: #e55b00; /* สีเมื่อ hover */
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background: #333;
+            padding: 15px 0;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        .nav a:hover {
+            color: #ff6600;
+        }
+        .hero {
+            background: url('https://www.lsionline.co.uk/images/123258/mgxstudio1.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+        .services {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .service-icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .service {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .service:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        .service i {
+            font-size: 40px;
+            color: #333;
+            transition: color 0.3s, transform 0.3s;
+        }
+        .service:hover i {
+            color: #ff6600;
+            transform: scale(1.2);
+        }
+        .service p {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        /* Show Cases Section */
+        .service img {
+            width: 300px; /* กำหนดขนาดความกว้าง */
+            height: 200px; /* กำหนดขนาดความสูง */
+            object-fit: cover; /* ทำให้รูปไม่ผิดสัดส่วน */
+            border-radius: 10px; /* ทำให้ขอบมน */
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 50px 20px;
+            text-align: center;
+            background: #fff;
+        }
+        .contact h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        E3 Production House
+        <a href="Promotion%20package.html" class="promotion-btn">Promotion Package</a>
+    </div>
+    <div class="nav">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Show Cases</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div class="hero">Your Vision, Our Production</div>
+
+    <div id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-icons">
+            <div class="service">
+                <i class="fas fa-pencil-ruler"></i>
+                <p>Production Design</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-lightbulb"></i>
+                <p>Creative</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-video"></i>
+                <p>Production</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-desktop"></i>
+                <p>Post Production</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-camera"></i>
+                <p>Photo</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-paint-brush"></i>
+                <p>Digital Artist</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio" class="services">
+        <h2>Show Cases</h2>
+        <div class="service-icons">
+            <div class="service">
+                <img src="https://2dhouse.com/uploads/item_attachment/picture/1523/2DH09834.jpg" alt="Video Presentation">
+                <p>Video Presentation</p>
+            </div>
+            <div class="service">
+                <img src="https://aslproductions.com/wp-content/uploads/2024/09/IMG_1499-2-Large.jpeg" alt="TVC (Television Commercial)">
+                <p>TVC (Television Commercial)</p>
+            </div>
+            <div class="service">
+                <img src="https://2dhouse.com/uploads/item_attachment/picture/1775/DSC00490.jpg" alt="Viral Marketing">
+                <p>Viral Marketing</p>
+            </div>
+            <div class="service">
+                <img src="https://media.recordproduction.com/rockfield-coachhouse-640.jpg" alt="Video Presentation">
+                <p>Video Presentation</p>
+            </div>
+            <div class="service">
+                <img src="https://media.recordproduction.com/rockfield-coachose-studioarea-640.jpg" alt="TVC (Television Commercial)">
+                <p>TVC (Television Commercial)</p>
+            </div>
+            <div class="service">
+                <img src="https://semasestudio.wordpress.com/wp-content/uploads/2018/02/production-e0b8a3e0b8b1e0b89ae0b89ce0b8a5e0b8b4e0b895e0b8a7e0b8b5e0b894e0b8b5e0b982e0b8ade0b982e0b886e0b8a9e0b893e0b8b2-e0b8abe0b899.jpg" alt="Viral Marketing">
+                <p>Viral Marketing</p>
+            </div>
+            <div class="service">
+                <img src="https://ostrichmotion.com/wp-content/uploads/2019/09/TPG-Films-4.jpg" alt="TVC (Television Commercial)">
+                <p>TVC (Television Commercial)</p>
+            </div>
+            <div class="service">
+                <img src="https://omc.osu.edu/sites/default/files/styles/widescreen_large/public/media/image/2024/07/OMC-broadcast-studio2.jpg" alt="Viral Marketing">
+                <p>Viral Marketing</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="contact">
+        <h2>CONTACT</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <p><strong>บริษัท E3 Production House</strong></p>
+                <p>312/25 Soi Ladprao 87, Bangkok 10310</p>
+                <p><strong>เลขประจำตัวผู้เสียภาษี:</strong> 010557177827</p>
+                <p class="hotline">📞 HOTLINE: 064-782-9415</p>
+                <p>ID LINE: <a href="#">E3mediahouse</a></p>
+                <p>Email: <a href="mailto:e3productionhouse@gmail.com">e3productionhouse@gmail.com</a></p>
+                <p>Email: <a href="mailto:e3mediahouse@gmail.com">e3mediahouse@gmail.com</a></p>
+                <p>Email: <a href="mailto:e3marketing@gmail.com">e3marketing@gmail.com</a></p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-line"></i></a>
+                </div>
+            </div>
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.46680648934!2d100.60539181483069!3d13.772547490354313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29c05b8f3e7df%3A0x10557717827!2sE3%20Production%20House!5e0!3m2!1sen!2sth!4v1699999999999" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

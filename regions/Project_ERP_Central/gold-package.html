@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Green Sky Production</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #fafafa, #fdfeff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            width: 100%;
+            max-width: 450px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .package-details {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .package-details h3 {
+            margin: 15px 0;
+            color: #333;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .price {
+            font-size: 24px;
+            color: #4CAF50;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .package-details ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .package-details li {
+            margin: 10px 0;
+            color: #555;
+            font-size: 14px;
+        }
+        .options {
+            margin-bottom: 25px;
+        }
+        .options h3 {
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .payment-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .payment-options label {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease, border-color 0.3s ease;
+        }
+        .payment-options label:hover {
+            background: rgba(245, 245, 245, 0.9);
+            border-color: #6a11cb;
+        }
+        .payment-options input[type="radio"] {
+            margin-right: 10px;
+            accent-color: #6a11cb;
+        }
+        .qr-code {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .qr-code h3 {
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .qr-code img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .qr-code p {
+            margin-top: 10px;
+            color: #555;
+            font-size: 14px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: #6a11cb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #2575fc;
+        }
+        .back-button {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            color: #6a11cb;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        .back-button:hover {
+            color: #2575fc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>ชำระเงินแพ็กเกจ</h2>
+        <div class="package-details">
+            <h3>แพ็กเกจที่เลือก: Gold </h3>
+            <p class="price">$3,500/เดือน</p>
+            <ul>
+                <li>Equipment Repair & Maintenance</li>
+                <li>Drainage System Repair</li>
+                <li>Production Line Calibration</li>
+            </ul>
+        </div>
+
+        <div class="options">
+            <h3>เลือกช่องทางการชำระเงิน</h3>
+            <div class="payment-options">
+                <label>
+                    <input type="radio" name="payment-method" value="QR" checked>
+                    QR Code (PromptPay)
+                </label>
+            </div>
+        </div>
+
+        <div class="qr-code">
+            <h3>สแกน QR Code เพื่อชำระเงิน</h3>
+            <img src="image/S__43778055.jpg" alt="QR Code for PromptPay">
+        </div>
+
+        <!-- ปรับปุ่มให้ใช้งานได้ -->
+        <button onclick="window.location.href='payment-success2.html';">ดำเนินการชำระเงิน</button>
+
+        <!-- ปุ่มย้อนกลับ -->
+        <a href="Packages.html" class="back-button">กลับไปที่หน้าชำระเงิน</a>
+    </div>
+</body>
+</html>

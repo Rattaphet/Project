@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promotion Packages - E3 Production House</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .header {
+            background: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background: #333;
+            padding: 15px 0;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        .nav a:hover {
+            color: #ff6600;
+        }
+        .hero {
+            background: url('https://www.lsionline.co.uk/images/123258/mgxstudio1.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+        .packages {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .package {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .package:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        .package h3 {
+            font-size: 24px;
+            color: #333;
+        }
+        .package p {
+            font-size: 16px;
+            color: #444;
+            margin-top: 10px;
+        }
+        .package .price {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ff6600;
+            margin: 20px 0;
+        }
+        .package .btn {
+            background-color: #ff6600;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .package .btn:hover {
+            background-color: #e55b00;
+        }
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-top: 30px;
+            transition: background-color 0.3s;
+        }
+        .btn-back:hover {
+            background-color: #ff6600;
+        }
+        .btn-back i {
+            margin-right: 8px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Promotion Packages - E3 Production House</div>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Show Cases</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div class="hero">Choose Your Ideal Package</div>
+
+    <div class="packages">
+        <!-- Production Design Packages -->
+        <div class="package">
+            <h3>การออกแบบการผลิต (Production Design)</h3>
+            <p>ออกแบบการผลิตที่เป็นมืออาชีพ สำหรับทุกรูปแบบการผลิต ปรับแต่งให้เหมาะสมกับแบรนด์และวิสัยทัศน์ของคุณ</p>
+            <div class="price">฿20,000</div>
+            <a href="contact.html" class="btn">ติดต่อเรา</a>
+        </div>
+        <div class="package">
+            <h3>การออกแบบการผลิต (Advanced Production Design)</h3>
+            <p>ออกแบบการผลิตขั้นสูง เน้นการวางแผนและเทคนิคที่ซับซ้อนมากขึ้นเพื่อผลลัพธ์ที่โดดเด่น</p>
+            <div class="price">฿40,000</div>
+            <a href="contact.html" class="btn">ติดต่อเรา</a>
+        </div>
+
+        <!-- Creative Packages -->
+        <div class="package">
+            <h3>การสร้างสรรค์ (Creative)</h3>
+            <p>การกำหนดทิศทางที่สร้างสรรค์และมีนวัตกรรมเพื่อให้แบรนด์ของคุณโดดเด่นและดึงดูดความสนใจ</p>
+            <div class="price">฿15,000</div>
+            <a href="contact.html" class="btn">ติดต่อเรา</a>
+        </div>
+        <div class="package">
+            <h3>การสร้างสรรค์ (Creative Pro)</h3>
+            <p>การสร้างสรรค์ที่พิเศษยิ่งขึ้น เพื่อให้แบรนด์ของคุณมีเอกลักษณ์และส่งเสริมภาพลักษณ์ของคุณในระดับสูงสุด</p>
+            <div class="price">฿30,000</div>
+            <a href="contact.html" class="btn">ติดต่อเรา</a>
+        </div>
+
+        <!-- Production Packages -->
+        <div class="package">
+            <h3>การผลิต (Production)</h3>
+            <p>บริการการผลิตครบวงจร เพื่อนำไอเดียของคุณไปสู่ผลลัพธ์ที่มีคุณภาพสูง</p>
+            <div class="price">฿50,000</div>
+            <a href="contact.html" class="btn">ติดต่อเรา</a>
+        </div>
+        <div class="package">
+            <h3>การผลิต (Premium Production)</h3>
+            <p>การผลิตในระดับพรีเมียม ด้วยทีมงานมืออาชีพและอุปกรณ์ที่ทันสมัย</p>
+            <div class="price">฿75,000</div>
+            <a href="contact.html" class="btn">ติดต่อเรา</a>
+        </div>
+
+        <!-- Post Production Packages -->
+        <div class="package">
+            <h3>การผลิตหลังการถ่ายทำ (Post Production)</h3>
+            <p>การตัดต่อ การออกแบบเสียง และการปรับสีเพื่อเพิ่มคุณภาพให้กับการผลิตของคุณ</p>
+            <div class="price">฿25,000</div>
+            <a href="contact.html" class="btn">ติดต่อเรา</a>
+        </div>
+        <div class="package">
+            <h3>การผลิตหลังการถ่ายทำ (Advanced Post Production)</h3>
+            <p>บริการตัดต่อขั้นสูง รวมถึงการสร้างสรรค์เสียงและการปรับสีในระดับมืออาชีพ</p>
+            <div class="price">฿45,000</div>
+            <a href="contact.html" class="btn">ติดต่อเรา</a>
+        </div>
+
+        <!-- Photo Packages -->
+        <div class="package">
+            <h3>การถ่ายภาพ (Photo)</h3>
+            <p>บริการถ่ายภาพมืออาชีพสำหรับงานอีเวนต์ ผลิตภัณฑ์ และอื่น ๆ</p>
+            <div class="price">฿18,000</div>
+            <a href="contact.html" class="btn">ติดต่อเรา</a>
+        </div>
+        <div class="package">
+            <h3>การถ่ายภาพ (Premium Photo)</h3>
+            <p>การถ่ายภาพในระดับพรีเมียม ที่เน้นความละเอียดสูงและมุมมองที่สร้างสรรค์</p>
+            <div class="price">฿35,000</div>
+            <a href="contact.html" class="btn">ติดต่อเรา</a>
+        </div>
+
+        <!-- Digital Artist Packages -->
+        <div class="package">
+            <h3>ศิลปินดิจิทัล (Digital Artist)</h3>
+            <p>ผลงานศิลปะดิจิทัล ออกแบบกราฟิก และการสร้างแบบจำลอง 3D เพื่อเปลี่ยนวิสัยทัศน์ของคุณให้เป็นจริง</p>
+            <div class="price">฿20,000</div>
+            <a href="contact.html" class="btn">ติดต่อเรา</a>
+        </div>
+        <div class="package">
+            <h3>ศิลปินดิจิทัล (Premium Digital Artist)</h3>
+            <p>ศิลปะดิจิทัลระดับพรีเมียม รวมถึงงานกราฟิกที่สร้างสรรค์และงาน 3D ที่มีความซับซ้อน</p>
+            <div class="price">฿50,000</div>
+            <a href="contact.html" class="btn">ติดต่อเรา</a>
+        </div>
+    </div>
+
+    <!-- Back to main page button -->
+    <a href="main.html" class="btn-back"><i class="fa fa-arrow-left"></i> กลับสู่หน้าแรก</a>
+
+</body>
+</html>

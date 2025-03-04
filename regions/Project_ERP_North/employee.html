@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แดชบอร์ดพนักงาน</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="employee.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="employee.js" defer></script>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Media Production House.</h2>
+        <a href="#" id="overviewBtn" class="active">ภาพรวม</a>
+        <a href="#" id="tasksBtn">งานที่ต้องทำ</a>
+        <a href="#" id="leaveBtn">การขอลาพัก</a>
+        <a href="#" id="profileBtn">โปรไฟล์</a>
+        <a href="#" id="reportsBtn">รายงาน</a>
+        <!-- เพิ่มหัวข้อรายรับรายจ่าย -->
+        <a href="#" id="financeBtn">รายรับรายจ่าย</a>
+        <a href="#" id="logout">Logout</a>
+    </div>
+
+    <div class="content" id="financeContent">
+        <div class="header">รายรับรายจ่าย</div>
+        
+        <!-- ฟอร์มบันทึกรายรับรายจ่าย -->
+        <div class="card">
+            <h3>บันทึกรายรับรายจ่าย</h3>
+            <form id="financeForm">
+                <label for="type">ประเภท:</label>
+                <select id="type" required>
+                    <option value="รายรับ">รายรับ</option>
+                    <option value="รายจ่าย">รายจ่าย</option>
+                </select>
+    
+                <label for="amount">จำนวนเงิน:</label>
+                <input type="number" id="amount" placeholder="กรุณากรอกจำนวนเงิน" required>
+    
+                <label for="description">รายละเอียด:</label>
+                <textarea id="description" rows="3" placeholder="กรุณากรอกรายละเอียด" required></textarea>
+    
+                <label for="date">วันที่:</label>
+                <input type="date" id="date" required>
+    
+                <button type="submit">บันทึก</button>
+            </form>
+        </div>
+    
+        <!-- สรุปรายรับรายจ่าย -->
+        <div class="card">
+            <h3>สรุปรายรับรายจ่าย</h3>
+            <p>ยอดรายรับทั้งหมด: <span id="totalIncome">0</span> บาท</p>
+            <p>ยอดรายจ่ายทั้งหมด: <span id="totalExpense">0</span> บาท</p>
+            <p>ยอดคงเหลือ: <span id="balance">0</span> บาท</p>
+        </div>
+    
+        <!-- รายการรายรับรายจ่าย -->
+        <div class="card">
+            <h3>รายการรายรับรายจ่าย</h3>
+            <ul id="financeList" class="task-list"></ul>
+        </div>
+    </div>
+    
+    <!-- Content -->
+    <div class="content" id="overviewContent">
+        <div class="header">ภาพรวมของพนักงาน</div>
+        
+        <!-- Cards -->
+        <div class="card">
+            <h3>งานที่ทำเสร็จแล้ว</h3>
+            <p>12 / 20</p>
+        </div>
+        <div class="card">
+            <h3>งานที่กำลังจะครบกำหนด</h3>
+            <p>5 งาน</p>
+        </div>
+        <div class="card">
+            <h3>ชั่วโมงการทำงาน</h3>
+            <p>35 ชั่วโมงในสัปดาห์นี้</p>
+        </div>
+
+        <!-- Chart -->
+        <div class="chart-container">
+            <canvas id="taskChart"></canvas>
+        </div>
+    </div>
+
+    <div class="content" id="tasksContent">
+        <div class="header">งานที่ต้องทำ</div>
+        
+        <!-- แทบค้นหาที่ปรับปรุงแล้ว -->
+        <div class="search-container">
+            <input type="text" id="searchTask" placeholder="ค้นหางาน..." onkeyup="searchTasks()">
+            <button>
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+
+        <ul class="task-list">
+            <li>
+                งาน 1: ตัดต่อวิดีโอ - กำหนดส่ง: 15 กุมภาพันธ์
+                <button>ดูรายละเอียด</button>
+            </li>
+            <li>
+                งาน 2: ถ่ายภาพสำหรับลูกค้า X - กำหนดส่ง: 20 กุมภาพันธ์
+                <button>ดูรายละเอียด</button>
+            </li>
+            <li>
+                งาน 3: การตัดต่อโพสต์สำหรับแคมเปญ - กำหนดส่ง: 25 กุมภาพันธ์
+                <button>ดูรายละเอียด</button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content" id="leaveContent">
+        <div class="header">การขอลาพัก</div>
+
+        <!-- ฟอร์มขอลาพัก -->
+        <div class="card">
+            <h3>แบบฟอร์มขอลาพัก</h3>
+            <form id="leaveForm">
+                <label for="leaveType">ประเภทการลา:</label>
+                <select id="leaveType" required>
+                    <option value="ลาป่วย">ลาป่วย</option>
+                    <option value="ลากิจ">ลากิจ</option>
+                    <option value="ลาพักร้อน">ลาพักร้อน</option>
+                </select>
+
+                <label for="startDate">วันที่เริ่มลา:</label>
+                <input type="date" id="startDate" required>
+
+                <label for="endDate">วันที่สิ้นสุดการลา:</label>
+                <input type="date" id="endDate" required>
+
+                <label for="reason">เหตุผล:</label>
+                <textarea id="reason" rows="4" required></textarea>
+
+                <button type="submit">ส่งคำขอลา</button>
+            </form>
+        </div>
+
+        <!-- รายการการลาที่เคยขอ -->
+        <div class="card">
+            <h3>รายการการลาของคุณ</h3>
+            <ul id="leaveList" class="task-list"></ul>
+        </div>
+    </div>
+
+    <div class="content" id="profileContent">
+        <div class="header">โปรไฟล์ของคุณ</div>
+        <div class="profile-info">
+            <p><strong>ชื่อ:</strong> จอห์น โด</p>
+            <p><strong>อีเมล:</strong> johndoe@example.com</p>
+            <p><strong>ตำแหน่ง:</strong> นักออกแบบกราฟิก</p>
+            <p><strong>แผนก:</strong> สื่อดิจิทัล</p>
+        </div>
+        <button>แก้ไขโปรไฟล์</button>
+    </div>
+
+    <!-- ส่วนเนื้อหาใหม่สำหรับรายงาน -->
+    <div class="content" id="reportsContent">
+        <div class="header">รายงาน</div>
+        
+        <!-- ตัวอย่างรายงาน -->
+        <div class="card">
+            <h3>รายงานการทำงานประจำเดือน</h3>
+            <p>สรุปผลการทำงานประจำเดือน มกราคม 2025</p>
+            <button>ดาวน์โหลดรายงาน</button>
+        </div>
+        <div class="card">
+            <h3>รายงานการลา</h3>
+            <p>สรุปการลาของพนักงานประจำปี 2025</p>
+            <button>ดาวน์โหลดรายงาน</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 บริษัท Media Production House</p>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification"></div>
+</body>
+</html>

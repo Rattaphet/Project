@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Sky Production</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    /* General Styles */
+    body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4eded; /* เปลี่ยนพื้นหลังเป็นสีขาว */
+            color: #000; /* เปลี่ยนสีตัวอักษรเป็นดำ */
+            overflow-x: hidden;
+            text-align: center;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(90deg, #070707, #070707); /* เปลี่ยนพื้นหลังเป็นโทนสีเทาอ่อน */
+            color: #000; /* เปลี่ยนสีตัวอักษรเป็นดำ */
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* เงาเบาลง */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            color: #ffffff; /* เปลี่ยนสีตัวอักษรเป็นดำ */
+        }
+
+        /* Navigation Styles */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #ffffff; /* เปลี่ยนสีตัวอักษรเป็นดำ */
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #4caf50; /* เปลี่ยนสีเมื่อโฮเวอร์เป็นสีเขียว */
+        }
+
+        /* Logo Styles */
+        .logo {
+            height: 60px;
+            margin-right: 15px;
+            border-radius: 50%;
+            border: 3px solid #000; /* เปลี่ยนสีขอบเป็นดำ */
+        }
+
+        /* About Section */
+        .section {
+            padding: 80px 20px;
+            background-color: #f9f9f9; /* เปลี่ยนพื้นหลังเป็นสีขาวเทา */
+            text-align: center;
+        }
+
+        .section h2 {
+            color: #4caf50; /* เปลี่ยนสีหัวข้อเป็นสีเขียว */
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .section p {
+            max-width: 800px;
+            margin: 0 auto 20px;
+            font-size: 20px;
+            line-height: 1.8;
+            color: #333; /* เปลี่ยนสีตัวอักษรเป็นเทาเข้ม */
+        }
+
+        .section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เงาเบาลง */
+        }
+
+    .section ul {
+      text-align: left;
+      max-width: 800px;
+      margin: 20px auto;
+      padding-left: 20px;
+      font-size: 18px;
+      color: #000000;
+    }
+
+    .section ul li {
+      margin-bottom: 10px;
+    }
+
+    /* Button Styles */
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #4caf50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease, transform 0.3s ease;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      background-color: #45a049;
+      transform: translateY(-3px);
+    }
+
+    /* Back Button Styles */
+    .back-button {
+      display: inline-block;
+      margin: 40px auto;
+      padding: 15px 30px;
+      background-color: #4caf50;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 5px;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #45a049;
+      transform: translateY(-3px);
+    }
+
+    /* Footer Styles */
+    .footer {
+      background-color: #222;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .footer p {
+      margin: 10px 0;
+      font-size: 16px;
+      color: #ccc;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: 24px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .logo {
+        margin-bottom: 15px;
+      }
+
+      .section h2 {
+        font-size: 28px;
+      }
+
+      .section p, .section ul li {
+        font-size: 18px;
+      }
+
+      .btn {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+
+      .back-button {
+        font-size: 16px;
+        padding: 12px 24px;
+      }
+
+      .footer p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container" style="display: flex; align-items: center;">
+      <img src="image/1.webp" alt="Green Sky Production Logo" class="logo">
+      <h1 style="margin-left: 15px;">Green Sky Production</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="main.html">HOME</a></li>
+        <li><a href="About us.html">ABOUT US</a></li>
+        <li><a href="Services Page.html">SERVICES</a></li>
+        <li><a href="Packages.html">PACKAGES</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="manager.html">MANAGER</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Creative Section -->
+  <section class="section" id="Creative">
+    <h2>Digital Artist ( Color Grading – Online )</h2>
+    <img src="image/digital-artist.jpg" alt="Creative Digital Artist">
+    <p>
+      บริการตกแต่งและแก้ไขภาพด้วยคอมพิวเตอร์ ที่ใช้เทคนิคงาน <strong>Compositing</strong> ผสมผสานกับภาพจากงานถ่ายและงานกราฟิก 
+      รวมถึงเทคนิคการทำสีงานวีดีโอ (Color Grading) เพื่อให้ผลงานสื่อโฆษณาและภาพยนตร์โฆษณามีความคมชัดและสวยงาม
+    </p>
+    <p>
+      ทีมงานของเราเน้นคุณภาพงานรีทัชในทุกๆ รายละเอียด เช่น:
+    </p>
+    <ul>
+      <li><strong>การรีทัชสินค้าหรือผลิตภัณฑ์:</strong> ปรับปรุงงานผิว, ใบหน้า, หุ่น และเส้นผมให้สมจริงและดึงดูด</li>
+      <li><strong>การเติมแต่งฉาก:</strong> สร้างและแก้ไขฉากในซีนต่างๆ เพื่อให้บรรยากาศสมจริงและน่าประทับใจ</li>
+      <li><strong>งานเทคนิคเฉพาะทาง:</strong> ทีมงานชำนาญด้านงานรีทัชและการออกแบบสำหรับสื่อ Animation, Film & Moving Image</li>
+    </ul>
+  </section>
+
+  <!-- Back Button -->
+  <a href="Services Page.html" class="back-button">Back to Services</a>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2023 Green Sky Production. All rights reserved.</p>
+  </footer>
+</body>
+</html>

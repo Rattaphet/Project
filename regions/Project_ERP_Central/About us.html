@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Sky Production</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+            text-align: center;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(90deg, #333, #000);
+            color: rgb(246, 242, 242);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Navigation Styles */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #4caf50;
+        }
+
+        /* Logo Styles */
+        .logo {
+            height: 60px;
+            margin-right: 15px;
+            border-radius: 50%;
+            border: 3px solid #ffffff;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 80px 20px;
+            background-color: #fdf7f7;
+            text-align: center;
+        }
+
+        .about-section h2 {
+            color: #4caf50;
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .about-section p {
+            max-width: 800px;
+            margin: 0 auto 20px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #0b0b0b;
+        }
+
+        .about-section .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .about-section .about-image {
+            flex: 1;
+            max-width: 30%;
+        }
+
+        .about-section .about-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .about-section .about-text {
+            flex: 2;
+            text-align: left;
+            color: #ddd;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #4caf50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.3s ease;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+            transform: translateY(-3px);
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #222;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #ccc;
+        }
+
+        .social-icons {
+            margin: 20px 0;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+
+        .social-icons img {
+            height: 40px;
+        }
+
+        .qr-code img {
+            height: 120px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .logo {
+                margin-bottom: 15px;
+            }
+
+            .about-section h2 {
+                font-size: 28px;
+            }
+
+            .about-section p {
+                font-size: 16px;
+            }
+
+            .btn {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+
+            .footer p {
+                font-size: 14px;
+            }
+
+            .social-icons img {
+                height: 35px;
+            }
+
+            .qr-code img {
+                height: 100px;
+            }
+
+            .about-section .about-image {
+                max-width: 60%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container" style="display: flex; align-items: center;">
+            <img src="image/1.webp" alt="Green Sky Production Logo" class="logo">
+            <h1 style="margin-left: 15px;">Green Sky Production</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="main.html">HOME</a></li>
+                <li><a href="About us.html">ABOUT US</a></li>
+                <li><a href="Services Page.html">SERVICES</a></li>
+                <li><a href="Packages.html">PACKAGES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="manager.html">MANAGER</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section" id="about-section">
+        <div class="container">
+            <div class="about-image">
+                <img src="image/-1.jpg" alt="Production Overview">
+            </div>
+            <div class="about-text">
+                <h2>ABOUT US</h2>
+                <p>บริษัท GREEN SKY PRODUCTION จำกัด คิดสร้างสรรค์ ออกแบบโปรดักชั่นดีไซน์ในงานวางแผนงานผลิตสื่อโฆษณาการตลาด ทั้งสื่อโฆษณาออฟไลน์และสื่อโฆษณาออนไลน์  โดยทีมมืออาชีพเชี่ยวชาญเข้าใจในการ Manage & Optimize รองรับแคมเปญโฆษณา ทุกขั้นตอนการดำเนินงานทางด้านการตลาดทุกแพลตฟอร์ม เพื่อให้เกิดผลลัพธ์ตรงตามความต้องการของลูกค้า.</p>
+                <p>สร้างคุณค่าในตัวสินค้าเพื่อเพิ่มยอดขายมากขึ้นผลงานมีคุณภาพรองรับโปรดักชั่นได้ทุกขนาดเน้นงานคุณภาพด้วยขบวนการมาตรฐานงานขบวนการโปรดักชั่นโฆษณา ด้วยแบบการทำงานในรูปแบบโปรดักชั่นเฮ้าส์จบในที่เดียว ให้สอดคล้องการผลิตสื่อสารการตลาดผสมความชำนาญ การผลิตสื่อโฆษณา การผลิตแบบครบวงจร ไม่ว่า Content Maketing จนถึงการผลิตคลิปวีดีโอ ไวรัล วีดีโอพรีเซ็นเทชั่น วีดีโอพรีเซ็นองค์กรบริษัท ในรูปแบบวีดีโอโปรดักชั่น และฟิล์มโปรดักชั่น</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>📍 123 Creative Street, Bangkok, Thailand 10110</p>
+            <p>📞 โทร: 098-765-4321</p>
+            <p>📩 Email: Green Sky Production@gmail.com</p>
+            <div class="social-icons">
+                <a href="#"><img src="image/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="image/instagram.png" alt="Instagram"></a>
+            </div>
+            <div class="qr-code">
+                <img src="image/qr-code.png" alt="LINE QR Code">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
